@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<odoo>
+   <record id="res_partner_inherit" model="ir.ui.view">
+      <field name="name">school.student.inherit</field>
+      <field name="model">school.student</field>
+      <field name="inherit_id" ref="base.view_partner_form" />
+      <field name="priority" eval="3"/>
+      <field name="arch" type="xml">
+          <div>
+             <button name="open_patient_appointments" type="object" string="Res_Partner" icon="fa-calendar" class="oe_stat_button"/>
+          </div>
+         <notebook position="inside">
+            <page string="Res Partners">
+               <group>
+                  <field name="company_type"/>
+               </group>
+            </page>
+         </notebook>
+<!--         <xpath expr="//field[@name='vat']" position="attributes">-->
+<!--            <attribute name="invisible">True</attribute>-->
+<!--         </xpath>-->
+<!--         <xpath expr="//page[@name='sales_purchases']" position="attributes">-->
+<!--            <attribute name="invisible">True</attribute>-->
+<!--         </xpath>-->
+<!--&lt;!&ndash;         <xpath expr="//page[@name='internal_notes']" position="attributes">&ndash;&gt;-->
+<!--&lt;!&ndash;            <attribute name="invisible">True</attribute>&ndash;&gt;-->
+<!--&lt;!&ndash;         </xpath>&ndash;&gt;-->
+<!--&lt;!&ndash;         <xpath expr="//page[@name='accounting']" position="attributes">&ndash;&gt;-->
+<!--&lt;!&ndash;            <attribute name="invisible">True</attribute>&ndash;&gt;-->
+<!--&lt;!&ndash;         </xpath>&ndash;&gt;-->
+<!--         <xpath expr="//field[@name='title']" position="attributes">-->
+<!--            <attribute name="invisible">True</attribute>-->
+<!--         </xpath>-->
+<!--         <xpath expr="//field[@name='lang']" position="attributes">-->
+<!--            <attribute name="invisible">True</attribute>-->
+<!--         </xpath>-->
+      </field>
+   </record>
+   <record id="company_type_res_partner_menu_action" model="ir.actions.act_window">
+      <field name="name">School Student</field>
+      <field name="res_model">school.student</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">kanban,tree,form</field>
+      <field name="context">{}</field>
+      <field name="domain">[]</field>
+   </record>
+   <menuitem id="schoolstudent_inherit_menu"
+                  parent="hospital_menu"
+                  name="School Student"
+                  sequence="3"
+                  action="company_type_school_student_menu_action"/>
+</odoo>
+
+

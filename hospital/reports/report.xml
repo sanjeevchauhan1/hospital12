@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="report_hospital_card"
+        string="Hospital Card"
+        model="doctor.patient"
+        report_type="qweb-pdf"
+        name="hospital.report_doctor"
+        file="hospital.report_doctor"/>
+
+
+    <report
+        id="report_sale_order_card"
+        string="sale order"
+        model="appointment.patient"
+        report_type="qweb-pdf"
+        name="hospital.sale_report_inherit"
+        file="hospital.sale_report_inherit"/>
+
+
+    <report
+        id="new_report_invoice_card"
+        string="performance"
+        model="store.medicin"
+        report_type="qweb-pdf"
+        name="hospital.report_student_id_card"
+        file="hospital.report_student_id_card"/>
+
+    <report
+        id="report_invoice_card"
+        string="invoice"
+        model="hospital.patient"
+        report_type="qweb-pdf"
+        name="hospital.invoice_report_inherit"
+        file="hospital.invoice_report_inherit"/>
+</odoo>

@@ -1,0 +1,98 @@
+<odoo>
+
+    <record id='appointment_patient_tree_view' model='ir.ui.view'>
+        <field name="name">appointment.patient.tree.view</field>
+        <field name="model">appointment.patient</field>
+        <field name="arch" type="xml">
+            <tree string="Book Appointment">
+                <field name="app_ment"/>
+                <field name="Patient_Name"/>
+                <field name="dob"/>
+                <field name="Gender"/>
+                <field name="phone_no"/>
+                <field name="Already_register"/>
+                <field name="purpose"/>
+                <field name="address"/>
+                <field name="problem"/>
+                <field name="age"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Form Views for appointment Patient -->
+
+     <record id='appointment_patient_form_view' model='ir.ui.view'>
+        <field name="name">appointment.patient.view</field>
+        <field name="model">appointment.patient</field>
+        <field name="arch" type="xml">
+            <form string="Book Appointment">
+                <header>
+                    <button name="%(hospital.create_date_form_wizard)d" string="Update Date" type="action" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <div>
+                        <button name="open_patient_appointments" type="object" string="doctor_detail" icon="fa-calendar" class="oe_stat_button"/>
+
+                    </div>
+                    <group>
+                            <div class="oe_title">
+                                <h1>
+                                    <field name="app_ment" readonly="1"/>
+                                </h1>
+                            </div>
+                        </group>
+                    <group>
+                        <group>
+                            <field name="choice"/>
+                            <field name="Patient_Name" attrs="{'required': [('choice', '=', True)]}"/>
+                            <field name="doctor_id"/>
+                            <field name="doctor_ids" widget="many2many_tag"/>
+                            <field name="dob" attrs="{'invisible': [('choice', '=', True)]}"/>
+                            <field name="age"/>
+                        </group>
+
+                        <group>
+                            <field name="Gender" placeholder="select"/>
+                            <field name="phone_no" widget="phone" attrs="{'readonly': [('choice', '=', True)]}"/>
+                            <field name="problem" placeholder="select"/>
+                        </group>
+                        <group>
+                            <field name="Already_register" widget="radio"/>
+                            <field name="purpose"/>
+                            <field name="address"/>
+                            <field name="age_group"/>
+                        </group>
+                        <group>
+                            <field name="remarks"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page>
+                        <field name="appointment_lines">
+                            <tree editable="Bottom">
+                                <field name="medicine"/>
+                                <field name="timing"/>
+                                <field name="next_appointment"/>
+                            </tree>
+                        </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+     </record>
+
+    <record id="action_appointment_patient_menu" model="ir.actions.act_window">
+        <field name="name">Make Appointment</field>
+        <field name="res_model">appointment.patient</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Make Appointment</p>
+        </field>
+    </record>
+
+
+</odoo>

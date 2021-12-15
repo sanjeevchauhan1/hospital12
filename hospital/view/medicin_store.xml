@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+      <!--Tree View Of Library -->
+      <record id='store_medicin_tree_views' model='ir.ui.view'>
+         <field name="name">store.medicin.tree</field>
+         <field name="model">store.medicin</field>
+         <field name="arch" type="xml">
+            <tree string="Store Medicin">
+                <field name="name" readonly="1"/>
+                <field name="medicin_name"/>
+                <field name="price" sum="total of price"/>
+            </tree>
+         </field>
+      </record>
+      <!--Form View Of Library-->
+
+      <record id='store_medicin_form_views' model='ir.ui.view'>
+         <field name="name">store.medicin.form</field>
+         <field name="model">store.medicin</field>
+         <field name="arch" type="xml">
+            <form string="Store Medicin">
+               <sheet>
+                  <field name="img" widget="image" class="oe_avatar" style="width: 90px; height: 90px;"/>
+                       <div>
+                           <h1>
+                             <field name="name" readonly="1"/>
+                           </h1>
+                        </div>
+                  <group>
+                     <group>
+                         <field name="medicin_name"/>
+                     </group>
+                     <group>
+                        <field name="price"/>
+                     </group>
+                  </group>
+
+                  <notebook>
+                     <page string="Stationery List">
+                        <field name="stationery_line">
+                           <tree string="Stationery Line" editable="bottom">
+                              <field name="item_name"/>
+                              <field name="item_no"/>
+                           </tree>
+                           <form string="Stationery Line" editable="bottom">
+                              <group>
+                                 <field name="item_name"/>
+                                 <field name="item_no"/>
+                              </group>
+                           </form>
+                        </field>
+                     </page>
+
+                      <page string="Stationery List2">
+                        <field name="stationery_line">
+                           <tree string="Stationery Line" editable="bottom">
+                              <field name="item_name"/>
+                              <field name="item_no"/>
+                           </tree>
+                           <form string="Stationery Line" editable="bottom">
+                              <group>
+                                 <field name="item_name"/>
+                                 <field name="item_no"/>
+                              </group>
+                           </form>
+                        </field>
+                     </page>
+                  </notebook>
+
+                   <notebook>
+                     <page string="Stationery List">
+                        <field name="stationery_line">
+                           <tree string="Stationery Line" editable="bottom">
+                              <field name="item_name"/>
+                              <field name="item_no"/>
+                           </tree>
+                           <form string="Stationery Line" editable="bottom">
+                              <group>
+                                 <field name="item_name"/>
+                                 <field name="item_no"/>
+                              </group>
+                           </form>
+                        </field>
+                     </page>
+                  </notebook>
+<!--                  <footer>-->
+<!--                     <button name="import_xls" string="Import" type="object" icon="fa-upload"/>-->
+<!--                     <group>-->
+<!--                        <field name="xls_file"/>-->
+<!--                           </group>-->
+<!--                  </footer>-->
+               </sheet>
+            </form>
+         </field>
+      </record>
+      <!--actions of the library menu-->
+        <record id="action_store_medicin_menu" model="ir.actions.act_window">
+           <field name="name">Store Medicin</field>
+           <field name="res_model">store.medicin</field>
+           <field name="view_type">form</field>
+           <field name="view_mode">tree,form</field>
+           <field name="domain">[]</field>
+           <field name="help" type="html">
+               <p class="o_view_nocontent_smiling_face">Create Store Medicin
+               </p>
+           </field>
+        </record>
+<!--        <menuitem id="school_library_menu" parent="school_configuration_menu" name="Library" action="action_school_library_menu"/>-->
+   </data>
+</odoo>

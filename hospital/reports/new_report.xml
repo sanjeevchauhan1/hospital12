@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_student_id_card">
+        <t t-call="web.html_container">
+
+                    <div class="page">
+                        <h3 style="text-align: center;"><b><u>NEW DELHI YMCA</u></b></h3>
+                        <br></br>
+                        <h4 style="text-align: center;"><b><u>PERFORMANCE APPRAISAL FORM</u></b></h4>
+                        <br></br>
+                        <p><b>Name DesignationEmployee Code____________________</b><span/>
+                        <br></br>
+                        <br></br>
+                        <b>Dept/Divin_____________________D.O.J._________________Annual Increment due on________________</b></p>
+                        <br></br>
+                    </div>
+                    <style>
+                        table, th, td {
+                                        border-collapse: collapse;
+                                        }
+                        th,td {
+                                padding: 5px;
+                                text-align: center;
+                                }
+                            .box
+                                 {
+
+                                    border:1px solid black;
+                                    padding: 0.5px 25px;
+                                    margin:10px 50px ;
+                                }
+                    </style>
+            <table style="width:100%">
+                <tr>
+                    <th colspan="2"></th>
+                    <th>Poor</th>
+                    <th>Average</th>
+                    <th>Satisfactory</th>
+                    <th>Good</th>
+                    <th>Excellent</th>
+                </tr>
+                <tr>
+                    <th>A.</th>
+                    <th>Administration:</th>
+                    <th colspan="5" style="text-align: center"> (to be filled by related Secretary)</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>a) Punctuality:</td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>b) Attendance:</td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>c) Behaviour:</td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>d) Attitude:</td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                </tr>
+                <tr>
+                    <th>B.</th>
+                    <th>Functional:</th>
+                    <th colspan="5" style="text-align: center"> (to be filled by Finance Secretary)</th>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td>e) Job Knowledge:</td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>f) Quantity of Work:</td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>g) Quality of Work:</td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>h) Initiative:</td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>(Responsibility)</td>
+                    <td colspan="5"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>i) Computer Knowledge:</td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="7"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>j) Integrity (Trust –worthy)</td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                    <td> <span class="box"></span></td>
+                </tr>
+
+            </table>
+
+
+                    <p>Specific Recommendation______________________________________________________________________________</p>
+                    <p><b>______________________________________________________________________________________________________________</b></p>
+                    <br></br>
+                        <table style="width:100%">
+                            <tr>
+                                <th><b>Name and Signature of the<br>Reporting Officer</br></b></th>
+                                <th><b>Remarks Of the Division Hand</b></th>
+                            </tr>
+                        </table>
+                    <br></br>
+                     <p style="text-align: center;"><b>Signature of the General Secretary and CEO</b></p>
+                </t>
+
+    </template>
+</odoo>

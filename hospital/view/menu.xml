@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="hospital_menu" name="Hospital"/>
+    <menuitem id="hospital_patient_menu" parent="hospital_menu" name="Patient" action="action_hospital_patient_menu"/>
+    <menuitem id="doctor_patient_menu" parent="hospital_menu" name="Doctor" action="action_doctor_patient_menu"/>
+    <menuitem id="appointment_patient_menu" parent="hospital_menu" name="Appointment" action="action_appointment_patient_menu"/>
+    <menuitem id="store_medicin_menu" parent="hospital_menu" name="Store_Medicin" action="action_store_medicin_menu"/>
+
+    <menuitem id="hospital_patient2_menu" parent="hospital_menu" name="Probationn_File" action="action_hospital_patient_menu"/>
+
+
+<!--    <menuitem id="hospital_menu" name="Hospital_menu"/>-->
+<!--    <menuitem id="hospital_customer_menu" parent="hospital_menu" name="Hospital_menu" action="action_cax_onversions_menu"/>-->
+</odoo>

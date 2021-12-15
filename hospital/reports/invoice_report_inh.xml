@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="invoice_report_inherit" inherit_id="account.report_invoice_document">
+
+        <xpath expr="//div[@class='page']" position="before">
+            <div class="col-auto mw-100 mb-2 m-1" style="width:120mm; height: 30mm;border:2px solid red;">
+                <strong>Name of Owner:</strong>
+                            <span class="m-1" t-field="o.owner_name"/>
+                <br/>
+                            <strong>Mobile:</strong>
+                            <span class="m-0" t-field="o.mobile_no"/>
+                <br/>
+                            <strong>Email:</strong>
+                            <span class="m-0" t-field="o.email"/>
+                <br/>
+
+            </div>
+            <div class="col-auto mw-100 mb-2 m-1" t-if="o.owner_name" name="invoice_date" style="width:120mm; height: 30mm;border:7px solid black;color:red; width:50%; float:right;">
+                <strong>Car Info</strong>
+                <br/>
+                            <strong>Plate No</strong>
+
+                <br/>
+                            <strong>Model Of Car</strong>
+
+                <br/>
+                <strong>etc....</strong>
+
+
+            </div>
+
+
+
+        </xpath>
+        <xpath expr="//div[@id='qrcode']" position="before">
+            <div class="col-auto mw-100 mb-2 m-1" style="color:red; width:55%; height=50%;">
+            <p>Term  Condition.</p>
+                <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+            </div>
+
+        </xpath>
+
+    </template>
+</odoo>

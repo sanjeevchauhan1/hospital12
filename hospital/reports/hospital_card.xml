@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_doctor">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                 <t>
+                    <div class="page">
+                        <div class="header din">
+                            <div class="float-right">
+                                <h3 class="mt0 text-center" t-field="o.name"/>
+                            </div>
+                        </div>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <div class="oe_structure"/>
+                        <div class="row">
+                            <div class="col-xs-2" style="margin:auto;">
+                            </div>
+                            <center>
+                                <div class="col-xs-8" style="margin:auto">
+                                    <table class="table table-condensed" style="border: 3px solid black !important; color:red;">
+                                        <tr>
+                                            <td width="80%">
+                                                <table color="red">
+                                                    <tr>
+                                                        <td border="15px">
+                                                            <p style="text-align:right;"><strong>Name: </strong></p>
+                                                            <p style="text-align:right;"><strong>specilist:</strong></p>
+                                                            <p style="text-align:right;"><strong>qualified: </strong></p>
+                                                            <p style="text-align:right;"><strong>Gender: </strong></p>
+                                                        </td>
+                                                        <td>
+                                                            <p style="text-align:left;padding-left:10px;"  t-field="o.name"/>
+                                                            <p style="text-align:left;padding-left:10px;" t-field="o.specilist"/>
+                                                            <p style="text-align:left;padding-left:10px;" t-field="o.qualified"/>
+                                                            <p style="text-align:left;padding-left:10px;" t-field="o.doctor_gender"/>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                </t>
+              </t>
+            </t>
+           </t>
+    </template>
+</odoo>

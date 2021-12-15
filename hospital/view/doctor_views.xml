@@ -1,0 +1,104 @@
+<odoo>
+             <!-- Tree Views for Doctor Patient -->
+    <record id='doctor_patient_tree_view' model='ir.ui.view'>
+        <field name="name">doctor.patient.tree.view</field>
+        <field name="model">doctor.patient</field>
+        <field name="arch" type="xml">
+            <tree string="Doctor Information">
+                <field name="doc_seq"/>
+                <field name="name"/>
+                <field name="specilist"/>
+                <field name="qualified"/>
+                <field name="age"/>
+
+            </tree>
+        </field>
+    </record>
+
+
+
+
+
+    <!-- Form Views for Doctor Patient -->
+
+     <record id='hospital_patient_form_view' model='ir.ui.view'>
+        <field name="name">doctor.patient.view</field>
+        <field name="model">doctor.patient</field>
+        <field name="arch" type="xml">
+            <form string="Doctor Information">
+                <header>
+                    <button name="%(hospital.create_appointment_wizard)d" string="create appointment" type="action" class="oe_highlight" context="{'default_name': name,'default_doctor_gender':doctor_gender}"/>
+                    <button name="report_print" type="object" string="Excel_Report" class="oe_highlight"/>
+                    <button name="action_send_card" string="send_mail" type="object" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <group>
+                        <div class="oe_title">
+                               <h1>
+                                   <field name="doc_seq" readonly="1"/>
+                               </h1>
+                        </div>
+                    </group>
+                    <group>
+                       <group>
+                           <field name="name"/>
+                           <field name="specilist"/>
+                           <field name="doc_email"/>
+
+                        </group>
+                        <group>
+                            <field name="qualified" placeholder="Enter the Qualification"/>
+                            <field name="age" placeholder="Enter the age"/>
+                        </group>
+                        <group>
+                            <field name="doctor_gender" placeholder="select" style="bgcolor:red;"/>
+                            <field name="file_doc"/>
+                        </group>
+                    </group>
+<!--                    <notebook>-->
+<!--                        <page>-->
+<!--                        <field name="appoint_time">-->
+<!--                            <tree editable="Bottom">-->
+<!--&lt;!&ndash;                                <field name="Doctor_Name"/>&ndash;&gt;-->
+<!--                                <field name="Patient_Name"/>-->
+<!--                                <field name="Patient_Date"/>-->
+<!--                            </tree>-->
+<!--                        </field>-->
+<!--                        </page>-->
+<!--                    </notebook>-->
+                </sheet>
+            </form>
+        </field>
+     </record>
+
+                    <!-- Kanban View for School Student -->
+
+<!--    <record id="doctor_patient_kanban_view" model="ir.ui.view">-->
+<!--        <field name="name">doctor.patient.kanban.view</field>-->
+<!--        <field name="model">doctor.patient</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <kanban class="o_res_partner_kanban">-->
+<!--                <field name="name"/>-->
+<!--                <field name="specilist"/>-->
+<!--                <field name="qualified"/>-->
+<!--                <field name="age"/>-->
+<!--                <field name="doctor_gender"/>-->
+
+
+<!--            </kanban>-->
+<!--        </field>-->
+<!--    </record>-->
+
+
+   <record id="action_doctor_patient_menu" model="ir.actions.act_window">
+        <field name="name">Doctor Information</field>
+        <field name="res_model">doctor.patient</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create Doctor detail</p>
+        </field>
+    </record>
+<!--    <menuitem id="school_teacher_menu" parent="school_menu" name="Teacher" action="action_school_teacher_menu" sequence="2"/>-->
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sale_report_inherit" inherit_id="sale.report_saleorder_document">
+
+        <xpath expr="//div[@class='row mt32 mb32']" position="after">
+            <div class="row mt32 mb32" id="test_inherit">
+                <div class="row mt32 mb32" id="informations">
+                    <div t-if="doc.patient_name and doc.state in ['draft', 'sent']" class="col-auto mw-100 mb-2">
+                      <strong>Patient Name:</strong>
+                      <p class="m-0" t-field="doc.patient_name"/>
+
+                        <strong>Doctor Name:</strong>
+                        <p class="m-0" t-field="doc.doctor_name"/>
+                    </div>
+
+
+                    <div t-if="doc.reference_name and doc.state in ['draft', 'sent']" class="col-auto mw-200 mb-2" style="padding-left: 390px;">
+                      <strong>Reference Name:</strong>
+                      <p class="m-0" t-field="doc.reference_name"/>
+
+                        <strong>Age:</strong>
+                      <p class="m-0" t-field="doc.age"/>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </xpath>
+
+    </template>
+</odoo>
